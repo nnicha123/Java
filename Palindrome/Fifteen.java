@@ -1,5 +1,5 @@
 import java.util.*;
-public class Fourteen {
+public class Fifteen {
   public static void main(String[] z){
     System.out.println(check("MAHOGANY","HOGMANAY"));
     System.out.println(check("MORE","ROME"));
