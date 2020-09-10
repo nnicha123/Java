@@ -7,7 +7,7 @@ public class ExampleThree {
     root = insert(root,7);
     root = insert(root,9);
     root = insert(root,10);
-    System.out.println(search(root,7));
+    System.out.println((search(root,7)).key);
     System.out.println(search(root,6));
     System.out.println(search(root,9));
   }
