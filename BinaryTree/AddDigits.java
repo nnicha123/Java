@@ -8,7 +8,7 @@ public class AddDigits {
     if(str.length() == 1){return num;}
     else{
       char[] c = str.toCharArray();
-      int total = 0;
+       int total = 0;
       for(int i=0;i<c.length;i++){
         total += Character.getNumericValue(c[i]);
       }
