@@ -28,7 +28,9 @@ public class Symmetric {
       return;
     }
     if (root.left == null && root.right == null) {
-      System.out.println(str + root.key);
+     str += root.key;
+     System.out.println(str);
+     
     }
     if (root.left == null) {
       str += "LEFTNULL";
