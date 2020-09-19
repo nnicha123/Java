@@ -23,13 +23,15 @@ public class BreadthFirst {
     root.right.right = new Node();
     root.right.right.key = 3;
     root.right.left.left = new Node();
-    root.right.left.left.key = 4;
+    root.right.left.left.key = 5;
     root.right.right.right = new Node();
     root.right.right.right.key = 5;
     System.out.println("Breadth First Search : Check Symmetry");
     System.out.println(printBreadth(root.left,true));
     System.out.println();
     System.out.println(printBreadth(root.right,false));
+    System.out.print("Symmetrical? ");
+    System.out.println(printBreadth(root.left,true).equals(printBreadth(root.right,false)));
     System.out.println();
     System.out.println("Depth First Search : Check Symmetry");
     // Check Symmetry by printing left & right 
