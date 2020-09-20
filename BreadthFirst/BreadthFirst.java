@@ -8,24 +8,12 @@ public class BreadthFirst {
     root.key = 1;
     root.left = new Node();
     root.left.key = 2;
-    root.left.left = new Node();
-    root.left.left.key = 3;
-    root.left.right = new Node();
-    root.left.right.key = 3;
-    root.left.left.left = new Node();
-    root.left.left.left.key = 5;
-    root.left.right.right = new Node();
-    root.left.right.right.key = 4;
-    root.right = new Node();
-    root.right.key = 2;
-    root.right.left = new Node();
-    root.right.left.key = 3;
-    root.right.right = new Node();
-    root.right.right.key = 3;
-    root.right.left.left = new Node();
-    root.right.left.left.key = 5;
-    root.right.right.right = new Node();
-    root.right.right.right.key = 5;
+   root.right = new Node();
+   root.right.key = 2;
+   root.left.right = new Node();
+   root.left.right.key = 3;
+   root.right.right = new Node();
+   root.right.right.key = 3;
     System.out.println("Breadth First Search : Check Symmetry");
     System.out.println(printBreadth(root.left,true));
     System.out.println();
@@ -48,11 +36,19 @@ public class BreadthFirst {
       // System.out.print(tempHead.key + " ");
       str += tempHead.key;
       if(leftSide){
-        if(tempHead.left != null){queue.add(tempHead.left);}
-        if(tempHead.right != null){queue.add(tempHead.right);}
+        if(tempHead.left != null){
+          queue.add(tempHead.left);
+        } else{queue.add(null);}
+        if(tempHead.right != null){
+          queue.add(tempHead.right);
+        } else{queue.add(null);}
       } else{
-        if(tempHead.right != null){queue.add(tempHead.right);}
-        if(tempHead.left != null){queue.add(tempHead.left);}
+        if(tempHead.right != null){
+          queue.add(tempHead.right);
+        }else{queue.add(null);}
+        if(tempHead.left != null){
+          queue.add(tempHead.left);
+        } else{queue.add(null);}
       }
     }
     return str;
